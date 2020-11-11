@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:network/screens/home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -62,7 +63,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 40.0),
               GestureDetector(
-                onTap: () {},
+                onTap: () => Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => HomeScreen(),
+                  ),
+                ),
                 child: Container(
                   margin: EdgeInsets.symmetric(horizontal: 60.0),
                   alignment: Alignment.center,
